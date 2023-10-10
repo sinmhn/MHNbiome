@@ -6,9 +6,8 @@ get habitat from s2cells
 * python-dateutil
  
 # Installation
-python -m pip install s2sphere
-
-python -m pip install python-dateutil
+> python -m pip install s2sphere
+> python -m pip install python-dateutil
 
 # Usage
 1. open 'settings.py'
