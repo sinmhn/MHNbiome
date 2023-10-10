@@ -17,7 +17,7 @@ OUTPUT_KML = 'MHNbiome.kml'
 STYLE_KML = 'S2CellsTemplate.kml'
 BIOME = ['Forest', 'Desert', 'Swamp']
 poly_styles = {'Forest':'#poly-7CB342-1200-76', 'Desert':'#poly-F9A825-1200-76', 'Swamp':'#poly-673AB7-1200-76'}
-HILBELT = True
+HILBELT = False
 
 # KML Namespace
 XMLNS = {'kmlns': 'http://www.opengis.net/kml/2.2'}
