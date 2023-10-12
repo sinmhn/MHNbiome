@@ -1,5 +1,5 @@
 # MHNbiome
-get habitat from s2cells
+get Monster Hunter habitat from s2cells id
 
 # Demo
 [Biome Map](https://www.google.com/maps/d/viewer?mid=1rINp3AAdUaLKhK5w2yWjIOeXoHS7axM&usp=sharing)
@@ -9,10 +9,10 @@ get habitat from s2cells
 * python-dateutil
  
 # Installation
-'''
+```
 python -m pip install s2sphere
 python -m pip install python-dateutil
-'''
+```
 
 # Usage
 1. open 'settings.py'
