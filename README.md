@@ -16,6 +16,6 @@ python -m pip install python-dateutil
 
 # Usage
 1. open 'settings.py'
-2. edit datetime and ractangle
+2. edit rectangle in [lat,lng] coordinates / datetime in ISO format
 3. execute MHNbiome.py
 4. upload 'MHNbiome.kml' to GoogleMap 'My Map' Layer
