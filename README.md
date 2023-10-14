@@ -2,7 +2,7 @@
 get Monster Hunter habitat from s2cells id
 
 # Demo
-[Biome Map](https://www.google.com/maps/d/viewer?mid=1gy0JYyXqFpW712iaKhk8WLafNiOOUVE&hl=ja&usp=sharing)
+[Biome Map](https://www.google.com/maps/d/viewer?mid=1gy0JYyXqFpW712iaKhk8WLafNiOOUVE&hl=en&usp=sharing)
 
 # Requirement
 * s2sphere
