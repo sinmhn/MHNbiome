@@ -1,5 +1,5 @@
 # MHNbiome
-Generate Monster Hunter now biome map from s2cells id
+Generate Monster Hunter now biome map
 
 # Demo
 [Biome Map](https://www.google.com/maps/d/viewer?mid=1gy0JYyXqFpW712iaKhk8WLafNiOOUVE&hl=en&usp=sharing)
