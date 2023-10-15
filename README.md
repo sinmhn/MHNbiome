@@ -2,7 +2,7 @@
 get Monster hunter now habitat from s2cells
 
 # Demo
-[Biome Map](https://www.google.com/maps/d/viewer?mid=1USJtRPPXmrfwIQYm9cPX5Awt6CYblbI&hl=en&usp=sharing)
+[Biome Map NYC](https://www.google.com/maps/d/viewer?mid=1USJtRPPXmrfwIQYm9cPX5Awt6CYblbI&hl=en&usp=sharing)
 
 # Requirement
 * s2sphere
