@@ -15,7 +15,6 @@ LEVEL: int = 14
 ALT = 0.
 OUTPUT_KML = 'MHNbiome.kml'
 STYLE_KML = 'S2CellsTemplate.kml'
-BIOME = ['Forest', 'Desert', 'Swamp']
 poly_styles = {'Forest':'#poly-7CB342-1200-76', 'Desert':'#poly-F9A825-1200-76', 'Swamp':'#poly-673AB7-1200-76'}
 HILBELT = False
 
@@ -32,8 +31,7 @@ def main():
     xml_tree = ET.parse("S2CellsTemplate.kml")
     ET.register_namespace('', XMLNS['kmlns'])
     kml_doc = xml_tree.find('kmlns:Document', XMLNS)
-    kml_doc.find('kmlns:name', XMLNS).text = dt_utc.strftime('%Y-%m-%d')
-
+    kml_doc.find('kmlns:name', XMLNS).text = dt_utc.strftime('%Y-%m-%d') + 'UTC'
     # Get Cell object
     r = s2sphere.RegionCoverer()
     r.max_level = LEVEL
@@ -48,19 +46,20 @@ def main():
     for cid in cell_ids:
         #  get Cell from CellId
         cell: Cell = s2sphere.Cell.from_face_pos_level(cid.face(), cid.pos(), cid.level())
-        cll: LatLng = cid.to_lat_lng()
 
         # Habitat cell
         # get habitat id from cellid
         habitat_id = int((int(cell.id().to_token(), 16) + 1) / 2)
+
         # date shift
-        habitat_idx = (habitat_id - day_cnt) % len(BIOME)
+        habitat_idx = (habitat_id - day_cnt) % len(settings.BIOME)
         # append habitat cell
-        kml_doc.append(placemark_s2cells(cell, BIOME[habitat_idx]))
+        kml_doc.append(placemark_s2cells(cell, settings.BIOME[habitat_idx]))
 
         # for test
         if HILBELT:
             # Draw Hilbert Curves
+            cll: LatLng = cid.to_lat_lng()
             cid_diff = int(cid.to_token(), 16) - cid_pre
             if cid_diff == 2:
                 Hilbert_Curves.append([cll.lng().degrees, cll.lat().degrees])
